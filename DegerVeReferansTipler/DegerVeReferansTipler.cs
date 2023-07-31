@@ -13,7 +13,15 @@ internal class DegerVeReferansTipler
 
         RefDegistir(ref x,ref y);
         Console.WriteLine("{0},{1}", x, y);
+        Console.WriteLine("---------------------------");
 
+
+        // eğer değişkenin değeri belli değil ise out keyword kullanılabilir ancak out olarak verilen metodun içerisinde
+        // bu değeri set etmemiz gereklidir.
+        int t;
+        OutDegistir(out t);
+        Console.WriteLine();
+        Console.WriteLine("artık t nin yeni değeri : {0} ",t);
 
         Console.ReadLine();
     }
@@ -43,5 +51,10 @@ internal class DegerVeReferansTipler
         Console.WriteLine("{0},{1}", a, b);
     }
 
+    private static void OutDegistir(out int a)
+    {
+        a = 11;
+        Console.WriteLine( " out olarak verilen t değeri: {0}",a);
+    }
 
 }
