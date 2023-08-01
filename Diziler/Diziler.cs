@@ -4,6 +4,20 @@ internal class Diziler
     private static void Main(string[] args)
     {
         Console.WriteLine();
+        // Dizileri parçalamak - array slicing
+        string[] sehirler = { "istanbul", "ankara", "izmir", "çanakkale", "antalya", "aydın", "muğla", "Bursa" };
+
+        // 0 ile 3 arasınkiler
+        foreach(string s in sehirler[0..3])
+        {
+            Console.WriteLine(s);
+        }
+        Console.WriteLine("------------------");
+        // 5 den sonrakiler
+        foreach (string s in sehirler[5..])
+        {
+            Console.WriteLine(s);
+        }
     }
 
     private static void DiziOrnek2()

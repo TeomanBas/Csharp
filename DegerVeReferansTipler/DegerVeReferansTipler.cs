@@ -23,7 +23,25 @@ internal class DegerVeReferansTipler
         Console.WriteLine();
         Console.WriteLine("artık t nin yeni değeri : {0} ",t);
 
+
+        // nullable types
+        // eğer bir tip nullable olabilir ise int? şeklinde tanımlanmalıdır.
+        int? maas= null;
+        // HasValue eğer değişkenin değeri var true yoksa false döner
+        if (maas.HasValue)
+        {
+            Console.WriteLine("değer var");
+        }
+        else
+        {
+            Console.WriteLine("değer yok");
+            // eğer içerisindeki değer yok veya null ise uygulama tarafında değeri 0 dır.
+            // GetValueOrDefault() eğer değeri varsa değerini getirir null veya değer yok ise sıfır döner.
+            Console.WriteLine(maas.GetValueOrDefault());
+        }
+
         Console.ReadLine();
+
     }
 
 
@@ -33,7 +51,7 @@ internal class DegerVeReferansTipler
      * metod dışında yer değişimi olmaz çünkü dışarıdaki main metodu içerisinde deki değişkenleri etkilemez
      * bu tip değişkenlere değer tipli değişkenler denir belleğin heap bölümünde tutulurlar
      */
-    
+
     private static void Degistir(int a, int b)
     {
         int gecici = a;
